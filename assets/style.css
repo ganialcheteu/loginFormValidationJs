@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-opacity);
+}
+:root {
+  --input-padding: 0.5em;
+  --red: rgb(216, 109, 109);
+  --green: rgb(117, 217, 117);
+  --black-opacity: rgba(0, 0, 0, 0.6);
+}
+body {
+  background: url("./images/pexels-frostroomhead-7897470.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
+form {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  gap: 0.5em;
+  width: 27%;
+  min-width: 350px;
+  max-width: 360px;
+  height: 400px;
+  margin: 10% auto;
+  border-radius: 24px;
+  transition: all 0.4s ease-in;
+  background-color: rgb(213, 191, 164);
+  padding: calc(var(--input-padding) * 4);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+
+  :placeholder-shown {
+    font-size: 0.7em;
+    color: #00000033;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    padding-left: var(--input-padding);
+    background: rgba(204, 196, 185, 0.8);
+    border: 0.5px solid rgba(230, 135, 18, 0.5);
+  }
+
+  h4 {
+    font-size: 1.9em;
+    font-weight: bold;
+    font-family: "poppins", sans-serif;
+  }
+
+  div:nth-child(3) {
+    position: relative;
+    input[type="password"] {
+      width: 100%;
+    }
+
+    img#eyeIcon {
+      position: absolute;
+      right: 5%;
+      top: 60%; /* top position adaptation in script */
+      z-index: 2;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+  }
+
+  div:nth-child(4) {
+    gap: 0.5em;
+    display: flex;
+    font-size: 0.6em;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--black-opacity);
+    flex-direction: row-reverse;
+
+    input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      accent-color: var(--red); /*modified for accent color, blue to red*/
+    }
+  }
+
+  div:nth-child(5) {
+    button {
+      padding: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+      margin: 0.5em auto;
+    }
+    button:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in;
+    }
+
+    button:first-child {
+      background: var(--red);
+      border: 0.5px solid var(--red);
+    }
+    button:first-child:hover {
+      background: #ff0000;
+    }
+    button:last-child {
+      background: var(--green);
+      border: 0.5px solid var(--green);
+    }
+    button:last-child:hover {
+      background: #00ff00;
+    }
+  }
+
+  div:nth-child(6) {
+    position: relative;
+    .bird {
+      position: absolute;
+      height: 90px;
+      width: 90px;
+      bottom: 0%;
+      right: 5%;
+      cursor: pointer;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+    }
+
+    .bird:hover {
+      transition: all 0.3s ease-in;
+      transform: rotate(-45deg) scale(0.9);
+      filter: drop-shadow(0 0 10px var(--green));
+    }
+  }
+
+  div:last-child {
+    display: flex;
+    gap: 0.8em;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    font-size: 0.7em;
+    padding: var(--input-padding);
+  }
+}
